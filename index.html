@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Science Lab Simulator</title>
+    
+<body>
+
+    <div class="lab-container">
+        <header class="lab-header">
+            <h1>Virtual Chemistry Lab</h1>
+            <p>Experiment: Acid-Base Titration</p>
+        </header>
+
+        <main class="lab-viewport">
+            <aside class="tool-shelf">
+                <h3>Equipments</h3>
+                <div class="tool" draggable="true" id="beaker">Beaker</div>
+                <div class="tool" draggable="true" id="burner">Bunsen Burner</div>
+                <div class="tool" draggable="true" id="thermometer">Thermometer</div>
+                
+                <h3>Chemicals</h3>
+                <div class="chemical" draggable="true" data-ph="1">HCl (Acid)</div>
+                <div class="chemical" draggable="true" data-ph="13">NaOH (Base)</div>
+            </aside>
+
+            <section class="work-surface" id="drop-zone">
+                <div class="placeholder-text">Drag items here to start the experiment</div>
+                <canvas id="labCanvas"></canvas>
+            </section>
+
+            <aside class="control-panel">
+                <h3>Controls</h3>
+                <label for="temp-slider">Heat Intensity</label>
+                <input type="range" id="temp-slider" min="0" max="100" value="0">
+                
+                <button id="reset-btn">Reset Experiment</button>
+                <button id="run-btn" class="primary-btn">Start Reaction</button>
+            </aside>
+        </main>
+
+        <footer class="data-log">
+            <div class="stat">Temperature: <span id="temp-display">25°C</span></div>
+            <div class="stat">pH Level: <span id="ph-display">7.0</span></div>
+            <div class="stat">Reaction State: <span id="status-text">Idle</span></div>
+        </footer>
+    </div>
+
+
+</body>
+</html>
